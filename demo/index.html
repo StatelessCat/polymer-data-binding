@@ -11,9 +11,11 @@
     <link rel="import" href="../src/child-element2.html"/>
   </head>
   <body>
-    <root-element prop1="hello-root">
-      <child-element1 prop1="hello-child1"></child-element1>
-      <child-element2 prop1="hello-child2"></child-element2>
-    </root-element>
+    <template is="dom-bind">
+      <root-element prop1="{{data}}">
+        <child-element1 prop1="{{data}}"></child-element1>
+        <child-element2 prop1="{{data}}"></child-element2>
+      </root-element>
+    </template>
   </body>
 </html>
