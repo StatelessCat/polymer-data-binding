@@ -4,10 +4,11 @@
 <link rel="import" href="../demo/bower_components/paper-item/paper-item.html"/>        <!--style only-->
 <link rel="import" href="../demo/bower_components/paper-item/paper-item-body.html"/>   <!--style only-->
 <link rel="import" href="../demo/bower_components/paper-material/paper-material.html"/><!--style only-->
+<link rel="import" href="../demo/bower_components/paper-slider/paper-slider.html"/><!--style only-->
 
 <dom-module id="root-element">
   <template>
-    <paper-material elevation="2">
+    <paper-material elevation="3">
       <paper-item>
         <paper-item-body one-line>
           <div>root-element</div>
@@ -16,6 +17,7 @@
           <div>prop1</div>
           <div secondary>{{prop1}}</div>
         </paper-item-body>
+        <paper-slider pin min="0" max="100" value="{{prop1}}"></paper-slider>
       </paper-item>
     </paper-material>
     
@@ -25,10 +27,10 @@
     Polymer({
       is: "root-element",
       prop1: {
-        type: String,
+        type: Number,
         notify: true,
         reflectToAttribute: true,
-        value: "defaultvalue-root"
+        value: 0
       }
     });
   </script>
