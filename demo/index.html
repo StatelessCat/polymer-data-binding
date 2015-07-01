@@ -6,9 +6,14 @@
       window.Polymer = window.Polymer || {};
       window.Polymer.dom = 'shadow';
     </script>
-    <link rel="import" href="../src/my-element.html"/>
+    <link rel="import" href="../src/root-element.html"/>
+    <link rel="import" href="../src/child-element1.html"/>
+    <link rel="import" href="../src/child-element2.html"/>
   </head>
   <body>
-    <my-element></my-element>
+    <root-element prop1="hello-root">
+      <child-element1 prop1="hello-child1"></child-element1>
+      <child-element2 prop1="hello-child2"></child-element2>
+    </root-element>
   </body>
 </html>

@@ -1,0 +1,34 @@
+<link rel="import" href="../demo/bower_components/polymer/polymer.html"/>
+
+<!-- just for style, not useful for logic -->
+<link rel="import" href="../demo/bower_components/paper-item/paper-item.html"/>        <!--style only-->
+<link rel="import" href="../demo/bower_components/paper-item/paper-item-body.html"/>   <!--style only-->
+<link rel="import" href="../demo/bower_components/paper-material/paper-material.html"/><!--style only-->
+
+<dom-module id="child-element1">
+  <template>
+    <paper-material elevation="1">
+      <paper-item>
+        <paper-item-body one-line>
+          <div>child-element1</div>
+        </paper-item-body>
+        <paper-item-body two-line>
+          <div>prop1</div>
+          <div secondary>{{prop1}}</div>
+        </paper-item-body>
+      </paper-item>
+    </paper-material>
+  </template>
+  <script>
+    Polymer({
+      is: "child-element1",
+      properties: {
+        prop1: {
+          type: String,
+          notify: true,
+          value: "defaultvalue"
+        }
+      }
+    });
+  </script>
+</dom-module>

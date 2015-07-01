@@ -1,0 +1,32 @@
+<link rel="import" href="../demo/bower_components/polymer/polymer.html"/>
+
+<!-- just for style, not useful for logic -->
+<link rel="import" href="../demo/bower_components/paper-item/paper-item.html"/>        <!--style only-->
+<link rel="import" href="../demo/bower_components/paper-item/paper-item-body.html"/>   <!--style only-->
+<link rel="import" href="../demo/bower_components/paper-material/paper-material.html"/><!--style only-->
+
+<dom-module id="root-element">
+  <template>
+    <paper-material elevation="2">
+      <paper-item>
+        <paper-item-body one-line>
+          <div>root-element</div>
+        </paper-item-body>
+        <paper-item-body two-line>
+          <div>prop1</div>
+          <div secondary>{{prop1}}</div>
+        </paper-item-body>
+      </paper-item>
+    </paper-material>
+    
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      is: "root-element",
+      properties: {
+        prop1: String
+      }
+    });
+  </script>
+</dom-module>
