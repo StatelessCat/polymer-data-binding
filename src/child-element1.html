@@ -27,9 +27,14 @@
       properties: {
         prop1: {
           type: String,
-          notify: true
+          notify: true,
+          observer: '_prop1Changed'
         }
-      }
+      },
+      _prop1Changed: function(newValue, oldValue) {
+        console.log("oldValue:" + oldValue);
+        console.log("newValue:" + newValue);
+      },
     });
   </script>
 </dom-module>
