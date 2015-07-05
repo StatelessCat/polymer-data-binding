@@ -6,16 +6,13 @@
       window.Polymer = window.Polymer || {};
       window.Polymer.dom = 'shadow';
     </script>
-    <link rel="import" href="../src/root-element.html"/>
     <link rel="import" href="../src/child-element1.html"/>
     <link rel="import" href="../src/child-element2.html"/>
   </head>
   <body>
     <template is="dom-bind">
-      <root-element prop1="{{data}}">
-        <child-element1 prop1="{{data}}"></child-element1>
-        <child-element2 prop1="{{data}}"></child-element2>
-      </root-element>
+      <child-element1 prop1="{{prop1}}"></child-element1>
+      <child-element2 prop1="{{prop1}}"></child-element2>
     </template>
   </body>
 </html>

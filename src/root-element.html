@@ -17,7 +17,12 @@
           <div>prop1</div>
           <div secondary>{{prop1}}</div>
         </paper-item-body>
+        <paper-item-body two-line>
+          <div>prop2</div>
+          <div secondary>{{prop2}}</div>
+        </paper-item-body>
         <paper-slider pin min="0" max="100" value="{{prop1}}"></paper-slider>
+        <paper-slider pin min="0" max="100" value="{{prop2}}"></paper-slider>
       </paper-item>
     </paper-material>
     
@@ -27,6 +32,11 @@
     Polymer({
       is: "root-element",
       prop1: {
+        type: Number,
+        notify: true,
+        reflectToAttribute: true
+      },
+      prop2: {
         type: Number,
         notify: true,
         reflectToAttribute: true,

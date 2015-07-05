@@ -17,7 +17,7 @@
           <div>prop1</div>
           <div secondary>{{prop1}}</div>
         </paper-item-body>
-        <paper-slider min="0" max="100" value="{{prop1}}"></paper-slider>
+        <paper-slider pin min="0" max="100" value="{{prop1}}"></paper-slider>
       </paper-item>
     </paper-material>
   </template>
@@ -26,12 +26,14 @@
       is: "child-element2",
       properties: {
         prop1: {
-          type: Number,
-          notify: true,
-          reflectToAttribute: true,
-          value: 0
+          type: String,
+          notify: true
         }
-      }
+      },
+      attached: function() {
+        this.setAttribute('prop1', 42)
+        console.log("");
+      },
     });
   </script>
 </dom-module>
